@@ -19,5 +19,5 @@ steps:
       "Content-Type":"application/json", 
       "Accept": "application/json"
       }
-    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0'
+    #urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0'
     waitForCompletion: 'false'    
