@@ -27,6 +27,5 @@ steps:
       "TaskInstanceId": "$(system.TaskInstanceId)", 
       "AuthToken": "$(system.AccessToken)"
       }
-    body: '--include'
-    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0 --data ''{"diskSizeGB" : 20}'''
+    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0 --digest --include --data ''{"diskSizeGB" : 20}'''
     waitForCompletion: 'false'    
