@@ -1,4 +1,25 @@
 # Maven
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    serviceConnection: 'Atlas Service Connection'
+    method: 'PATCH'
+    headers: |
+      {
+      "Content-Type":"application/json", 
+      "Accept": "application/json",
+      "PlanUrl": "$(system.CollectionUri)", 
+      "ProjectId": "$(system.TeamProjectId)", 
+      "HubName": "$(system.HostType)", 
+      "PlanId": "$(system.PlanId)", 
+      "JobId": "$(system.JobId)", 
+      "TimelineId": "$(system.TimelineId)", 
+      "TaskInstanceId": "$(system.TaskInstanceId)", 
+      "AuthToken": "$(system.AccessToken)"
+      }
+    body: '--include'
+    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0 --data ''{"diskSizeGB" : 20}'''
+    waitForCompletion: 'false'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
