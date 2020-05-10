@@ -19,5 +19,5 @@ steps:
       "Content-Type":"application/json", 
       "Accept": "application/json"
       }
-    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0 --digest --include --data ''{"diskSizeGB" : 20}'''
+    urlSuffix: '/groups/5d56db41d5ec131e74b498fc/clusters/Cluster0 --digest --include --data ''{"diskSizeGB" : 20}'' --user "XHQUOAXB:35836c59-64bd-4633-b74f-2c0f5e45200e"'
     waitForCompletion: 'false'    
